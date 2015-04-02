@@ -39,9 +39,7 @@ namespace democorflow
 				this.Navigation.PushAsync(new CRMDetailPage(e.SelectedItem as Contactpersoon));
 			};
 
-            _itemsList.ItemsSource = Personen;
-
-            _searchbar.TextChanged += (sender, e) => Filter(_searchbar.Text);
+			_itemsList.ItemTemplate = new DataTemplate (typeof(ContactpersoonCell));
 
             _layout.Children.Add(_searchbar);
             _layout.Children.Add(_itemsList);
