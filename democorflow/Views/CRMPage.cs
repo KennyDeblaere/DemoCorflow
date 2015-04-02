@@ -10,11 +10,11 @@ namespace democorflow
 {
 	public class CRMPage : ContentPage
 	{
-		ListView _itemsList = new ListView();
+		private ListView _itemsList = new ListView();
         private SearchBar _searchbar = new SearchBar() { Placeholder="Zoeken" };
         private StackLayout _layout = new StackLayout();
-        private ObservableCollection<Contactpersoon> personen = new ObservableCollection<Contactpersoon>();
-        private List<Contactpersoon> houdPersonen = (List<Contactpersoon>)DependencyService.Get<IDataService>().LoadAll<Contactpersoon>();
+        private ObservableCollection<Contactpersoon> personen;
+        private List<Contactpersoon> houdPersonen;
 
         public ObservableCollection<Contactpersoon> Personen
         {
@@ -27,6 +27,9 @@ namespace democorflow
 			Title = "CRM";
 			Icon = "Contracts.png";
 
+            houdPersonen = (List<Contactpersoon>)DependencyService.Get<IDataService>().LoadAll<Contactpersoon>();
+            Personen = (ObservableCollection<Contactpersoon>)DependencyService.Get<IDataService>().LoadAll<Contactpersoon>();
+
 			Padding = new Thickness(0,Device.OnPlatform(20,0,0),0,0);
 
 
@@ -36,7 +39,9 @@ namespace democorflow
 				this.Navigation.PushAsync(new CRMDetailPage(e.SelectedItem as Contactpersoon));
 			};
 
-			_itemsList.ItemTemplate = new DataTemplate (typeof(ContactpersoonCell));
+            _itemsList.ItemsSource = Personen;
+
+            _searchbar.TextChanged += (sender, e) => Filter(_searchbar.Text);
 
             _layout.Children.Add(_searchbar);
             _layout.Children.Add(_itemsList);
@@ -58,7 +63,7 @@ namespace democorflow
         private void Filter(string text)
         {
             Personen.Clear();
-            //houdPersonen.Where(t => t.voornaam.ToLower().Contains(text.ToLower()).ToList().ForEach(t => Personen.Add(t)));
+            houdPersonen.Where(t => t.voornaam.ToLower().Contains(text.ToLower())).ToList().ForEach(t => Personen.Add(t));
         }
 
 		protected override async void OnAppearing()

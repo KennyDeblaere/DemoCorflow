@@ -1,14 +1,12 @@
-﻿<Properties StartupItem="Droid/democorflow.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.49a0b2ac" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="democorflow/Views/LoginPage.cs">
+﻿<Properties StartupItem="Droid\democorflow.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.56.100:5555" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="democorflow\Views\LoginPage.cs">
     <Files>
-      <File FileName="../../Downloads/xamarin-forms-samples-master/LoginDemo/LoginPattern/MainPage.cs" Line="8" Column="3" />
-      <File FileName="../../Downloads/xamarin-forms-samples-master/LoginDemo/LoginPattern/ILoginManager.cs" Line="6" Column="3" />
-      <File FileName="democorflow/Views/CRMPage.cs" Line="56" Column="11" />
-      <File FileName="democorflow/Views/LoginPage.cs" Line="55" Column="5" />
-      <File FileName="democorflow/Views/MenuPage.cs" Line="29" Column="8" />
-      <File FileName="democorflow/Views/RootPage.cs" Line="34" Column="4" />
-      <File FileName="democorflow/democorflow.cs" Line="54" Column="50" />
+      <File FileName="democorflow\Views\CRMPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\Views\LoginPage.cs" Line="37" Column="37" />
+      <File FileName="democorflow\Views\MenuPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\Views\RootPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\democorflow.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
