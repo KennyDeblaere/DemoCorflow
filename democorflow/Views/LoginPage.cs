@@ -33,7 +33,12 @@ namespace democorflow
 			_syncParams = SyncParams.LoadSavedSyncParams();
 
 			_layout = new StackLayout { Padding = 10 };
-
+            _error = new Label
+            {
+                Text="Login Failed",
+                TextColor = Color.Red,
+                IsVisible = false
+            };
 			_label = new Label
 			{
 				Text = "Login",
