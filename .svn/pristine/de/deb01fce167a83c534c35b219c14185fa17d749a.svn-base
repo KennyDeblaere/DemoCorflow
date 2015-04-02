@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{6E93DD22-C03B-47FF-9505-A7A2CE37E6F8}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>democorflow</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)democorflow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\SyncService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ZagDebugSchemaVersionCheck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MenuListData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MenuListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Artikel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Bedrijf_Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Bedrijf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contactpersoon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Ligplaats.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Opdracht_Werknemer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Opdracht.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Prestatie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Prestatiesoort.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Stad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SyncParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Verbruik_Ligplaats.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Verbruikartikel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Werknemer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RootPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\WerkopdrachtPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CRMDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CRMPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ContactpersoonCell.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+  </ItemGroup>
+</Project>

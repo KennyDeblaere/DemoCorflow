@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Droid\democorflow.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.f50d6b91" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="democorflow\Views\LoginPage.cs">
+    <Files>
+      <File FileName="democorflow\Views\CRMPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\Views\LoginPage.cs" Line="14" Column="26" />
+      <File FileName="democorflow\Views\MenuPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\Views\RootPage.cs" Line="1" Column="1" />
+      <File FileName="democorflow\democorflow.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

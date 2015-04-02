@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
+using System.Collections.ObjectModel;
 
 using Xamarin.Forms;
 
@@ -9,6 +11,16 @@ namespace democorflow
 	public class CRMPage : ContentPage
 	{
 		ListView _itemsList = new ListView();
+        private SearchBar _searchbar = new SearchBar() { Placeholder="Zoeken" };
+        private StackLayout _layout = new StackLayout();
+        private ObservableCollection<Contactpersoon> personen = new ObservableCollection<Contactpersoon>();
+        private List<Contactpersoon> houdPersonen = (List<Contactpersoon>)DependencyService.Get<IDataService>().LoadAll<Contactpersoon>();
+
+        public ObservableCollection<Contactpersoon> Personen
+        {
+            get { return personen; }
+            set { personen = value; OnPropertyChanged("Personen"); }
+        }
 
 		public CRMPage ()
 		{
@@ -26,7 +38,10 @@ namespace democorflow
 
 			_itemsList.ItemTemplate = new DataTemplate (typeof(ContactpersoonCell));
 
-			Content = _itemsList;
+            _layout.Children.Add(_searchbar);
+            _layout.Children.Add(_itemsList);
+
+			Content = _layout;
 
 			/*ToolbarItems.Add(new ToolbarItem()
 				{
@@ -39,6 +54,12 @@ namespace democorflow
 						})
 				});*/
 		}
+
+        private void Filter(string text)
+        {
+            Personen.Clear();
+            //houdPersonen.Where(t => t.voornaam.ToLower().Contains(text.ToLower()).ToList().ForEach(t => Personen.Add(t)));
+        }
 
 		protected override async void OnAppearing()
 		{
