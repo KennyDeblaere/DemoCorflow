@@ -8,6 +8,7 @@ namespace democorflow
 	{
 		private StackLayout _layout;
 		private Label _label;
+        private Label _error;
 		private Entry _username;
 		private Entry _password;
 		private Button _button;
@@ -51,11 +52,18 @@ namespace democorflow
 
 
 			_button = new Button { Text = "Sign In", TextColor = Device.OnPlatform(Color.Black,Color.White,Color.White)};
-			_button.Clicked += (sender, e) => {
-				Navigation.PopModalAsync();
-			};
+            _button.Clicked += btnLogin_Click;
 			Content = new ScrollView { Content = _layout };
 		}
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            int loginNumber = new LoginController(_username.Text, _password.Text).FindUsernameId();
+            if (loginNumber > 0)
+                Navigation.PopModalAsync();
+            else
+                _error.IsVisible = true;
+        }
 
 		protected override void OnAppearing()
 		{
